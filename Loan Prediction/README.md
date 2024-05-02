@@ -1,6 +1,7 @@
 # Loan Prediction
 
-This repository contains code for predicting loan approval based on various features of loan applicants. The dataset used for this analysis is `Loan_train.csv`.
+This repository contains code for predicting loan approval based on various features of loan applicants. The dataset used for this analysis is [Loan Prediction Problem Dataset](https://www.kaggle.com/datasets/altruistdelhite04/loan-prediction-problem-dataset).
+
 
 ## Problem Statement
 
