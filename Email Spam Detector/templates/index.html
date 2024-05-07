@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+  <title>Email Spam Classifier</title>
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .navbar-brand {
+      font-size: 1.5rem;
+    }
+
+    .form-floating textarea {
+      height: 200px;
+    }
+
+    .btn-primary {
+      background-color: #343a40;
+      border-color: #343a40;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Email Spam Classifier</a>
+    </div>
+  </nav>
+
+
+  <!-- Input form -->
+
+  <div class="container mt-4">
+    <h2 class="text-center mb-4">Type an Email here to check if it is Spam or Ham</h2>
+
+    <form action="/" method="POST">
+      <div class="form-floating mb-3">
+        <textarea class="form-control" placeholder="Write your email here.." id="email" name="email"></textarea>
+        <label for="email">Write your email here...</label>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary">Submit</button>
+    </form>
+
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pzjw8f+whovU+0560W+48Nvkh4Jo1ymRJqRFX4Xqcjlo8qinFfn4FEY3dL2j+Jl2" crossorigin="anonymous"></script>
+</body>
+
+</html>
