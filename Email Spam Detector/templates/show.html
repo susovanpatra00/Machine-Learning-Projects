@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+        crossorigin="anonymous">
+
+    <title>Email Spam Classifier</title>
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+
+        .result-container {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .result-heading {
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        .result-message {
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .btn-go-back {
+            background-color: #198754;
+            border-color: #198754;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Email Spam Classifier</a>
+        </div>
+    </nav>
+
+    <!-- Show Result -->
+    <div class="container result-container">
+        <h2 class="result-heading">Email Spam Classifier's Result</h2>
+        <div class="result-message">
+            {% if prediction==1 %}
+            <p><strong>Prediction:</strong> This is a <span style="color: red;">SPAM</span> message.</p>
+            <p>Don't worry! We've got you covered.</p>
+            <img src="{{ url_for('static', filename='spam.webp') }}" alt="Spam Image" class="img-fluid">
+            {% elif prediction==0 %}
+            <p><strong>Prediction:</strong> This is <span style="color: green;">NOT</span> a spam message.</p>
+            <p>Congratulations! Your inbox is safe.</p>
+            <img src="{{ url_for('static', filename='not-spam.webp') }}" alt="Not Spam Image" class="img-fluid">
+            {% endif %}
+        </div>
+        <a href="/">
+            <button class="btn btn-lg btn-go-back">Go Back</button>
+        </a>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pzjw8f+whovU+0560W+48Nvkh4Jo1ymRJqRFX4Xqcjlo8qinFfn4FEY3dL2j+Jl2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
